@@ -1,24 +1,20 @@
-# README
+Create a simple String calculator with a method signature like this:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+int add(string numbers)
+Input: a string of comma-separated numbers
+Output: an integer, sum of the numbers
+Examples:
 
-Things you may want to cover:
+Input: “”, Output: 0
+Input: “1”, Output: 1
+Input: “1,5”, Output: 6
+Allow the add method to handle any amount of numbers.
 
-* Ruby version
+Allow the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
 
-* System dependencies
+Support different delimiters:
 
-* Configuration
+To change the delimiter, the beginning of the string will contain a separate line that looks like this: "//[delimiter]\n[numbers…]". For example, "//;\n1;2" where the delimiter is ";" should return 3.
+Calling add with a negative number will throw an exception: "negative numbers not allowed <negative_number>".
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If there are multiple negative numbers, show all of them in the exception message, separated by commas.
